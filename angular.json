@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bmlo-system",
+            "outputPath": "deploy/bmlo-system",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -30,17 +30,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/primeflex/primeflex.css",
+              "node_modules/sweetalert2/src/sweetalert2.scss",
+              "node_modules/ngx-spinner/animations/ball-scale-multiple.css",
+              "node_modules/ngx-spinner/animations/ball-spin.css"
             ],
             "scripts": []
           },
           "configurations": {
             "production": {
+              "outputPath": "deploy/bmlo-system-prod",
               "budgets": [
                 {
                   "type": "initial",
                   "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -51,18 +58,25 @@
               "outputHashing": "all"
             },
             "development": {
+              "outputPath": "deploy/bmlo-system-dev",
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "qa":{
+              "outputPath": "deploy/bmlo-system-qa"
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "BMLO_System:build:production"
@@ -100,5 +114,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "eff4a092-5c1c-47af-863e-a4de0d4d2db9"
   }
 }
