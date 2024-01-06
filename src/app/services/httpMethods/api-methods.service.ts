@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable,OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Observable } from 'rxjs';
 import { data } from 'src/app/urls/api/api';
 import { LoanFullData, homeViewData } from 'src/app/interface/interface';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

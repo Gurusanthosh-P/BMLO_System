@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { LoginComponent } from 'src/app/pages/login/login.component';
 import { HomeComponent } from 'src/app/pages/home/home.component';
@@ -13,7 +12,6 @@ import { NotFoundComponent } from '../pages/not-found/not-found.component';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {FormsModule} from '@angular/forms'
-import {HttpClientModule} from '@angular/common/http'
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
@@ -32,6 +30,8 @@ import { DataViewModule } from 'primeng/dataview';
 import { PasswordModule } from 'primeng/password';
 import { SignUpComponent } from '../pages/sign-up/sign-up.component';
 import { SignUpPageComponent } from '../components/sign-up-page/sign-up-page.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 
 
