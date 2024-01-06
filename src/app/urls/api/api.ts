@@ -4,6 +4,6 @@ export const data = {
 
     api:'/api/bank_home_info',
     detailsApi:'/api/bank_info',
-    
-    userPass:'https://659542fb04335332df82543c.mockapi.io/validate/userPass'
+
+    userPass:'/validate/userPass'
 }
